@@ -5,13 +5,14 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Strings.sol";
 
 /**
- * @title TestDynamicNFT
+ * @title TestMultiPurposeNFT
  * @dev Simplified Test NFT contract for basic functionality testing
  */
-contract TestDynamicNFT is ERC721 {
+contract TestMultiPurposeNFT is ERC721 {
     using Strings for uint256;
 
     uint256 private _tokenIdCounter;
+    uint256 private version = 0;
 
     // Simplified NFT State
     struct NFTState {
@@ -34,21 +35,10 @@ contract TestDynamicNFT is ERC721 {
         "rainy",
         "cloudy",
         "snowy",
-        "foggy",
-        "stormy",
-        "windy",
-        "hail",
-        "hurricane",
-        "Wildfire",
-        "Tornado",
-        "Sandstorm",
-        "Cyclone",
-        "Blizzard",
-        "Heatwave",
-        "Flood"
+        "foggy"
     ];
     string[] private timeOptions =
-        ["morning", "afternoon", "evening", "night", "midnight", "dusk", "aurora", "twilight"];
+        ["morning", "afternoon", "evening", "night"];
 
     constructor() ERC721("Simple Dynamic NFT", "SDYNFT") {}
 
