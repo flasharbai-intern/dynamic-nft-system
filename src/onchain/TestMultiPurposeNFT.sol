@@ -12,7 +12,7 @@ contract TestMultiPurposeNFT is ERC721 {
     using Strings for uint256;
 
     uint256 private _tokenIdCounter;
-    uint256 private version = 7;
+    uint256 private version = 3;
 
     // Simplified NFT State
     struct NFTState {
